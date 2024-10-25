@@ -9,7 +9,7 @@ public class CustomerConfiguration: IEntityTypeConfiguration<CustomerEntity>
 {
     public void Configure(EntityTypeBuilder<CustomerEntity> builder)
     {
-        builder.ToTable("Customers");
+        builder.ToTable("Customer");
 
         builder.ConfigureBaseEntity();
 
