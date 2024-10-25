@@ -7,8 +7,8 @@ namespace CreditCard.Infrastructure.Messaging
         private readonly IConnection _connection;
         private readonly IModel _channel;
         private const string _exchange = "customer-service-exchange";
-        private const string _queueAddCreditCardToCustomer = "add_credit_card_to_custumercredit_proposal_has_credit_queue";
-        private const string _queueAddCreditCardToCustomerDeadLetter = "add_credit_card_to_custumercredit_proposal_has_credit_dead_letter_queue";
+        private const string _queueAddCreditCardToCustomer = "add_credit_card_to_custumer_queue";
+        private const string _queueAddCreditCardToCustomerDeadLetter = "add_credit_card_to_custumer_dead_letter_queue";
         
         public RabbitMqSetupService(IConnection connection, IModel channel)
         {

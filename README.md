@@ -1,7 +1,8 @@
 # Credit card
 
 ### New Migration:
-- para criar uma migração do banco de dados execute o comando abaixono terminal no caminho "src/CreditCard.Infrastructure".1. dotnet ef --startup-project ../CreditCard.API/  migrations add initial -c CreditCardContext
+- para criar uma migração do banco de dados execute o comando abaixono terminal no caminho "src/CreditCard.Infrastructure".
+1. dotnet ef --startup-project ../CreditCard.API/  migrations add initial -c CreditCardContext
 2. dotnet ef --startup-project ../CreditCard.API/  database update
 
 ### Docker Compose:
