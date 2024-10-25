@@ -64,7 +64,7 @@ public class CreditCardRepository : ICreditCardRepository
             .ToListAsync();
     }
 
-    public async Task<List<CreditCardEntity>> GetAllCreditCardsByCustomerId(Guid customerId) // Na lógica inicial só será possível 1 cartao por cliente, mas já permitindo suporte para mais de 1.
+    public async Task<List<CreditCardEntity>> GetAllCreditCardsByCustomerId(Guid customerId)
     {
         return await _context.CreditCards
             .Where(c => c.Customer.Id == customerId)

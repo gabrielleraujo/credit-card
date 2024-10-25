@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+          "build",
+          "${workspaceFolder}/CreditCard.API/CreditCard.API.csproj",
+          "/property:GenerateFullPaths=true",
+          "/consoleloggerparameters:NoSummary"
+        ],
+        "problemMatcher": "$msCompile",
+        "group": "build",
+        "detail": "Build da API CreditCard"
+      },
+      {
+        "label": "docker-run: debug",
+        "type": "shell",
+        "command": "docker-compose -f docker-compose.yml up --build",
+        "problemMatcher": [],
+        "detail": "Inicia o Docker Compose para o ambiente de depuração."
+      },
+      {
+        "label": "docker-run: stop",
+        "type": "shell",
+        "command": "docker-compose -f docker-compose.yml down",
+        "problemMatcher": [],
+        "detail": "Para e remove os containers do Docker Compose."
+      },
+      {
+        "label": "docker-run: clean",
+        "type": "shell",
+        "command": "docker-compose -f docker-compose.yml down --rmi all -v --remove-orphans",
+        "problemMatcher": [],
+        "detail": "Limpa os containers, volumes e imagens criados pelo Docker Compose."
+      }
+    ]
+  }
+  
